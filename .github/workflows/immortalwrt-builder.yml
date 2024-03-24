@@ -54,7 +54,8 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        git clone  -b mt7915_mtwifi --single-branch https://github.com/padavanonly/immortalwrt
+        # git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     # - name: Load custom feeds
